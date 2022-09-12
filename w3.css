@@ -3,6 +3,12 @@ html {
   box-sizing: border-box
 }
 
+#myNavbar
+{
+  background-color: white;
+  color: #333;
+}
+
 *,
 *:before,
 *:after {
@@ -1180,12 +1186,12 @@ a {
     opacity: 1
   }
 }
-
+/*
 .w3-animate-top {
   position: relative;
   animation: animatetop 0.4s
 }
-
+*/
 @keyframes animatetop {
   from {
     top: -300px;
@@ -1286,7 +1292,7 @@ a {
 }
 
 .w3-opacity-min {
-  opacity: 1
+  opacity: 1;
 }
 
 .w3-greyscale-max,
@@ -1645,8 +1651,9 @@ a {
 
 .w3-black,
 .w3-hover-black:hover {
-  color: #fff !important;
-  background-color: #000 !important
+  color: #000 !important;
+  background-color: #fff !important;
+  animation-duration: 0s;
 }
 
 .w3-grey,
