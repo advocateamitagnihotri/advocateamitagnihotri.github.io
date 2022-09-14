@@ -9,7 +9,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+html{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+
+body,h1,h2,h3,h4,h5,h6
+{
+  font-family: "Lato", sans-serif;
+}
+
 body, html {
   height: 100%;
   color: #777;
@@ -115,8 +127,9 @@ body, html {
 .about-para
 {
   text-align: justify;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
-  font-size: 2vh;
+  font-size: 2.25vh;
 }
 
 .callNowButton
@@ -421,6 +434,23 @@ function toggleFunction() {
         x.className += " w3-show";
     } else {
         x.className = x.className.replace(" w3-show", "");
+    }
+}
+document.addEventListener('contextmenu', event => event.preventDefault());
+window.onload = function() {
+    window.document.body.onkeydown = function() {
+        if (event.ctrlKey) {
+            event.stopPropagation();
+            event.preventDefault();
+            try {
+                event.keyCode = 0;
+            }
+            catch (event) {
+
+            }
+            return false;
+        }
+        return true;
     }
 }
 </script>
