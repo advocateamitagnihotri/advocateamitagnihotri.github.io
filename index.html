@@ -60,9 +60,60 @@ body, html {
   font-size: 40px;
 }
 
+.intro
+{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+.grids-div
+{
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.grids-left
+{
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin-right: 2.5px;
+  margin-bottom: 7px;
+}
+
+.grids-right
+{
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin-left: 2.5px;
+  margin-bottom: 7px;
+}
+/* @media only screen and (max-width: 600px)
+{
+  .intro
+  {
+    margin-top: 0;
+  }
+} */
+
+@media only screen and (max-width: 600px)
+{
+  .grids-left, .grids-right
+  {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .about-para
 {
   text-align: justify;
+  font-weight: 500;
+  font-size: 2vh;
 }
 </style>
 </head>
@@ -118,7 +169,21 @@ body, html {
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-padding-large">
-      <p style="text-align: center; margin-top: 60px;">🙏*वार्षिक चुनाव घोषणा*🙏<br>
+      <p class="intro">
+        परम आदरणीय अधिवक्ता महोदय जी, <br>
+        उच्च न्यायालय अभिभाषक संघ,इंदौर में होने वाले निर्वाचन दिनांक 29/09/2022 को मैं कार्यकारणी पद हेतु आपके आशीर्वाद/स्नेह रूपी अमूल्य मत एवं समर्थन का आकांक्षी हूँ ।
+        <br>
+        कार्यकारिणी  पद हेतु
+        <br>
+        ✍🏻अमित अग्निहोत्री एडवोकेट🙏🏻
+        <br>
+        मो 7869032950
+      </p>
+      <br>
+        <hr style="margin: 0; margin: auto; border: 0.25px solid lightgray; width: 95%;">
+      <br>
+      <p class="intro">
+        🙏*वार्षिक चुनाव घोषणा*🙏<br>
 
         सम्मानीय अधिवक्ता महोदय <br>
         सादर नमन <br>
@@ -129,7 +194,8 @@ body, html {
         अभिभाषक एकता ज़िंदाबाद <br>
         
         Adv Amit Agnihotri<br>
-        HIGH COURT BAR ASSOCIATION,INDORE</p>
+        HIGH COURT BAR ASSOCIATION, INDORE
+      </p>
         
     </div>
     <!--Hide over-->
@@ -180,28 +246,41 @@ body, html {
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+
+<!--w3-content w3-container w3-padding-64-->
+<div class="useless-div" id="portfolio">
   <h3 class="w3-center"></h3>
-  <p class="w3-center"><em></em></p><br>
+  <!-- <p class="w3-center"><em></em></p><br> -->
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
+  
+  <div class="grids-div">
+    <img class="grids-left" src="images/p1.jpg">
+    <img class="grids-right" src="images/p2.jpg">
+    <br>
+    <img class="grids-left" src="images/p3.jpg">
+    <img class="grids-right" src="images/p4.jpg">
+  </div>
+
+  <!-- <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="images/p1.jpg" style="width:100%" onclick="onClick(this)">
+      <img class="grids" src="images/p1.jpg" style="width:100%" onclick="onClick(this)">
     </div>
     
     <div class="w3-col m3">
-      <img src="images/p2.jpg" style="width:100%" onclick="onClick(this)">
+      <img class="grids" src="images/p2.jpg" style="width:100%" onclick="onClick(this)">
     </div>
 
     <div class="w3-col m3">
-      <img src="images/p3.jpg" style="width:100%" onclick="onClick(this)">
+      <img class="grids" src="images/p3.jpg" style="width:100%" onclick="onClick(this)">
     </div>
 
     <div class="w3-col m3">
-      <img src="images/p4.jpg" style="width:100%" onclick="onClick(this)">
+      <img class="grids" src="images/p4.jpg" style="width:100%" onclick="onClick(this)">
     </div>
-  </div>
+  </div> -->
+
+
 <!--
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
@@ -222,7 +301,8 @@ body, html {
   
     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>-->
   </div>
-</div>
+
+  
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -232,6 +312,7 @@ body, html {
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
+
 
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
@@ -263,9 +344,9 @@ body, html {
 -->
 
 
-<img style=" border-radius: 0px;" src="images/contactt.jpg" class="w3-image w3-round" style="width:100%;">
+<img style="border-radius: 10px; width:100%; margin: auto; display: block; text-align: center; max-width: 512px;" src="images/contact.jpg" class="w3-round">
 <center>
-<div style="margin-top: 30px; font-family: 'Segoe UI';" class="w3-margin-bottom">
+<div style="margin-top: 30px; font-family: 'verdana';" class="w3-margin-bottom">
   <i style="margin-bottom: 15px;" class="fa fa-map-marker fa-fw w3-hover-text-black w3-margin-right"></i>M.P. High Court, Indore<br>
   <i style="margin-bottom: 15px;" class="fa fa-phone fa-fw w3-hover-text-black w3-margin-right"></i>+91 7869032950<br>
   <i style="margin-bottom: 15px;" class="fa fa-envelope fa-fw w3-hover-text-black w3-margin-right"></i>amitagnihotri05@gmail.com<br>
@@ -285,7 +366,7 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <center<<p style="color: white;">Powered by<br> <a href="https://advocateamitagnihotri.github.io/" class="w3-hover-text-green">Advocate Amit Agnihotri</a></p></center>
+  <center><p style="color: white;">Powered by<br> <a href="https://advocateamitagnihotri.github.io/" class="w3-hover-text-green">Advocate Amit Agnihotri</a></p></center>
 </footer>
  
 <script>
